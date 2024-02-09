@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Vivianty</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Box-Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Remix Icon -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" -->
+/>
+</head>
+<body>
+    <!-- Flowers -->
+    <div class="flowers">
+        <img src="flowers.png" alt="">
+        <img src="flowers.png" alt="">
+        <img src="flowers.png" alt="">
+        <img src="flowers.png" alt="">
+        <img src="flowers.png" alt="">
+        <img src="flowers.png" alt="">
+        <img src="flowers.png" alt="">
+        <img src="flowers.png" alt="">
+        <img src="flowers.png" alt="">
+        <img src="flowers.png" alt="">
+    </div>
+
+    <!-- Navbar -->
+    <header class="header">
+        <a class="logo"  href="#">Vivianty</a>
+        
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <i class='bx bx-moon' id="icon-theme"></i>
+        <i class='bx bx-menu colored-icon' id="menu-icon"></i>
+    </header>
+
+    <!-- Light Theme -->
+    <!-- <script>
+        const icon = document.getElementById("icon-theme");
+  
+        icon.onclick = function(){
+          document.body.classList.toggle("light-theme");
+          if(document.body.classList.contains("light-theme")){
+            icon.className = "bx bx-moon";
+          }else{
+            icon.className = "bx bx-sun";
+          }
+        }
+      </script> -->
+
+    <!-- Light Theme -->
+    <script>
+        const themeButton = document.getElementById("icon-theme");
+        const lightTheme = 'light-theme';
+        const iconTheme = 'bx-sun';
+
+        // User Memilih Thema
+        const selectedTheme = localStorage.getItem('selected-theme');
+        const selectedIcon = localStorage.getItem('selected-icon');
+        
+        // Validasi Thema
+        const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'dark' : 'light'
+        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
+
+        // Validasi Ketika User Memilih Thema
+        if (selectedTheme){
+            // Validasi Thema Aktif atau Tidak
+            document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](lightTheme)
+            themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
+        }
+
+        // Aktivasi Theme manual dengan Button
+        themeButton.addEventListener('click', () => {
+            // Add or Remove the dark / icon theme
+            document.body.classList.toggle(lightTheme)
+            themeButton.classList.toggle(iconTheme)
+            // Menyimpan Thema
+            localStorage.setItem('selected-theme', getCurrentTheme())
+            localStorage.setItem('selected-icon', getCurrentIcon())
+        })
+      </script>
+      
+    <section class="home_page" id="home">
+        <div class="home">
+            <h2 class="hi">Hello, </h2>
+            <h1><span class="typing"></span></h1>
+            <li>Staff of Notary Public</li>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos repudiandae nostrum facilis dicta quo, nobis similique.</p>
+            <div class="home-social">
+                <a href="#"><i class='bx bxl-instagram colored-icon'></i></i></a>
+                <a href="#"><i class='bx bxl-linkedin colored-icon'></i></a>
+                <a href="#"><i class="bx bxl-facebook colored-icon"></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+        <div class="page"> 
+            <div class="cards">
+                <img src="profile.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+    <!-- Typing -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        let typingEffect = new Typed(".typing",{
+            strings : ["I'm Vivianty Putri"],
+            loop : true,
+            typeSpeed : 100,
+            backSpeed : 80,
+            backDelay : 1500,
+        })
+    </script>
+
+    <!-- About Page -->
+    <section class="about-page" id="about">
+        <div class="page">
+            <div class="cards">
+                <img src="profile.jpg" alt="">
+            </div>
+        </div>
+        <div class="about-me">
+            <h2 class="heading">About <span>Me</span></h2>
+
+            <div class="text-align">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium at possimus nihil magnam dolorum culpa provident molestias dolore obcaecati aut repellendus praesentium odit natus, corporis esse incidunt omnis qui. Eligendi, sequi iste aspernatur iusto voluptatum ipsa natus consequatur fugiat ex, eum maxime, numquam magni molestiae? Libero laborum nam illo magni quam rerum facere fuga eos voluptatem eius mollitia deleniti, odio dicta asperiores, nesciunt magnam non.</p>
+            </div>
+            <a href="" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <!-- Services Page -->
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Pembuatan Akta</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum a sunt repudiandae non veniam quae eligendi accusamus. Nihil.</p>
+            <a href="" class="btn">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Pendirian PT</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum a sunt repudiandae non veniam quae eligendi accusamus. Nihil.</p>
+            <a href="" class="btn">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Pendirian PT</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum a sunt repudiandae non veniam quae eligendi accusamus. Nihil. </p>
+            <a href="" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div> -->
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Muhalas | <a target="_blank" href="https://muhalas.github.io">muhalas.github.io</a></p>
+        </div>
+    </footer>
+
+
+    <!-- Custom Js -->
+    <script src="script.js"></script>
+</body>
+</html>
