@@ -41,7 +41,7 @@
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </nav>
-        <i class='bx bx-moon' id="icon-theme"></i>
+        <i class='bx bx-sun' id="icon-theme"></i>
         <i class='bx bx-menu colored-icon' id="menu-icon"></i>
     </header>
 
@@ -63,21 +63,21 @@
     <script>
         const themeButton = document.getElementById("icon-theme");
         const lightTheme = 'light-theme';
-        const iconTheme = 'bx-sun';
+        const iconTheme = 'bx-moon';
 
         // User Memilih Thema
         const selectedTheme = localStorage.getItem('selected-theme');
         const selectedIcon = localStorage.getItem('selected-icon');
         
         // Validasi Thema
-        const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'dark' : 'light'
-        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
+        const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'light' : 'dark'
+        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-sun' : 'bx bx-moon'
 
         // Validasi Ketika User Memilih Thema
         if (selectedTheme){
             // Validasi Thema Aktif atau Tidak
             document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](lightTheme)
-            themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
+            themeButton.classList[selectedIcon === 'bx bx-sun' ? 'add' : 'remove'](iconTheme)
         }
 
         // Aktivasi Theme manual dengan Button
