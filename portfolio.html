@@ -13,7 +13,7 @@
     <!-- Logo -->
     <link rel="shortcut icon" type="image/x-icon" href="logo.png">
     <!-- Remix Icon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Flowers -->
@@ -48,7 +48,7 @@
     <script>
         const themeButton = document.getElementById("icon-theme");
         const lightTheme = 'light-theme';
-        const iconTheme = 'bx bx-moon';
+        const iconTheme = 'ri-moon-line';
 
         // User Memilih Thema
         const selectedTheme = localStorage.getItem('selected-theme');
@@ -56,7 +56,7 @@
         
         // Validasi Thema
         const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'light' : 'dark'
-        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-sun' : 'bx bx-moon'
+        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-sun' : 'ri-moon-line'
 
         // Validasi Ketika User Memilih Thema
         if (selectedTheme){
