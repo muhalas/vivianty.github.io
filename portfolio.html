@@ -13,8 +13,7 @@
     <!-- Logo -->
     <link rel="shortcut icon" type="image/x-icon" href="logo.png">
     <!-- Remix Icon -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" -->
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
     <!-- Flowers -->
@@ -46,24 +45,10 @@
     </header>
 
     <!-- Light Theme -->
-    <!-- <script>
-        const icon = document.getElementById("icon-theme");
-  
-        icon.onclick = function(){
-          document.body.classList.toggle("light-theme");
-          if(document.body.classList.contains("light-theme")){
-            icon.className = "bx bx-moon";
-          }else{
-            icon.className = "bx bx-moon";
-          }
-        }
-      </script> -->
-
-    <!-- Light Theme -->
     <script>
         const themeButton = document.getElementById("icon-theme");
         const lightTheme = 'light-theme';
-        const iconTheme = 'bx-sun';
+        const iconTheme = 'bx-moon';
 
         // User Memilih Thema
         const selectedTheme = localStorage.getItem('selected-theme');
@@ -76,7 +61,7 @@
         // Validasi Ketika User Memilih Thema
         if (selectedTheme){
             // Validasi Thema Aktif atau Tidak
-            document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](lightTheme)
+            document.body.classList[selectedTheme === 'light' ? 'add' : 'remove'](lightTheme)
             themeButton.classList[selectedIcon === 'bx bx-sun' ? 'add' : 'remove'](iconTheme)
         }
 
